@@ -1,14 +1,18 @@
 import React from 'react';
 import style from './style.module.scss';
 import Footer from './footer';
+import { Outlet } from 'react-router-dom';
+import Header from './header';
+import Search from '../components/search';
 
 function App() {
   return (
     <div className={style.App}>
-      <header className={style.App_header}>
-        <p className='text-red-700'>
-          header
-        </p>
+      <Header></Header>
+      <div className="">
+        <Search/>
+      </div>
+      <div className={style.App_header}>
         <a
           className={style.App_link}
           href="https://reactjs.org"
@@ -16,8 +20,9 @@ function App() {
           rel="noopener noreferrer"
         >
           Home page
+          <Outlet/>
         </a>
-      </header>
+      </div>
       <Footer></Footer>
     </div>
   );
