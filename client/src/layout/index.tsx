@@ -1,14 +1,10 @@
-import React from 'react';
-import style from './style.module.scss';
-import Footer from './footer';
-import { Outlet } from 'react-router-dom';
-import Header from './header';
-import Search from '../components/search';
+import LandingPage from "../page/LandingPage";
+import style from "./style.module.scss";
 
 function App() {
   return (
     <div className={style.App}>
-      <Header></Header>
+      {/* <Header></Header>
       <div className="">
         <Search/>
       </div>
@@ -23,7 +19,8 @@ function App() {
           <Outlet/>
         </a>
       </div>
-      <Footer></Footer>
+      <Footer></Footer> */}
+      <LandingPage />
     </div>
   );
 }
