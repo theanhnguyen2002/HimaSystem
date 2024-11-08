@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { IconFB } from "../../components/icon/IconFB";
-import { IconMenu } from "../../components/icon/IconMenu";
-import { IconMail } from "../../components/icon/IconMail";
-import { IconPhone } from "../../components/icon/IconPhone";
-import { IconDiamond } from "../../components/icon/IconDiamond";
-import { IconHeart } from "../../components/icon/IconHeart";
-import { IconPhoto } from "../../components/icon/IconPhoto";
-import { IconGift } from "../../components/icon/IconGift";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { useState } from "react";
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { IconArrowForward } from "../../components/icon/IconArrowForward";
+import { IconDiamond } from "../../components/icon/IconDiamond";
+import { IconFB } from "../../components/icon/IconFB";
+import { IconGift } from "../../components/icon/IconGift";
+import { IconHeart } from "../../components/icon/IconHeart";
+import { IconMail } from "../../components/icon/IconMail";
+import { IconMenu } from "../../components/icon/IconMenu";
+import { IconPhone } from "../../components/icon/IconPhone";
+import { IconPhoto } from "../../components/icon/IconPhoto";
 
 interface Props {
   collapseID?: string;
@@ -24,6 +24,7 @@ const LandingPage = (props: Props) => {
   const toggleNavbar = () => {
     setIsCollapsed(!isCollapsed);
   };
+
   return (
     <div className="text-gray-800 antialiased">
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
@@ -50,22 +51,16 @@ const LandingPage = (props: Props) => {
           <div
             className={`${
               isCollapsed ? "hidden" : "flex"
-            } lg:flex flex-grow items-center lg:bg-transparent lg:shadow-none hidden`}
+            } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
             id="example-collapse-navbar"
           >
-            {/* <ul className="flex flex-col lg:flex-row list-none mr-auto">
-                            <li className="flex items-center">
-                                <a className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/landing"><i className="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2" />
-                                    Docs</a>
-                            </li>
-                        </ul> */}
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/profile.php?id=61557647955666"
                 >
-                  <IconFB width="24" height="24" />
+                  <IconFB  width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`}/>
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
@@ -74,7 +69,7 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="mailto:nguyentheanh14072002@gmail.com"
                 >
-                  <IconMail width="24" height="24" />
+                  <IconMail width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
                   <span className="lg:hidden inline-block ml-2">Gmail</span>
                 </a>
               </li>
@@ -83,7 +78,7 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="tel:0923239468"
                 >
-                  <IconPhone width="24" height="24" />
+                  <IconPhone width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
                   <span className="lg:hidden inline-block ml-2">
                     Điện thoại
                   </span>
@@ -100,6 +95,48 @@ const LandingPage = (props: Props) => {
               </li>
             </ul>
           </div>
+          {/* End div mb */}
+          <div
+            className="hidden lg:flex flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg"
+            id="example-collapse-navbar"
+          >
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="https://www.facebook.com/profile.php?id=61557647955666"
+                >
+                  <IconFB  width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`}/>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="mailto:nguyentheanh14072002@gmail.com"
+                >
+                  <IconMail width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="tel:0923239468"
+                >
+                  <IconPhone width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
+                </a>
+              </li>
+              <li className="flex items-center">
+                <button
+                  className="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3"
+                  type="button"
+                  style={{ transition: "all 0.15s ease 0s" }}
+                >
+                  <i className="fas fa-arrow-alt-circle-down" /> Đăng Nhập
+                </button>
+              </li>
+            </ul>
+          </div>
+          {/* End div pc */}
         </div>
       </nav>
       <main>
