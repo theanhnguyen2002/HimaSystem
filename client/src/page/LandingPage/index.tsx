@@ -391,7 +391,7 @@ const LandingPage = (props: Props) => {
                     Hạnh phúc trọn vẹn không chỉ ở những gì ta có, mà ở sự đồng
                     hành, sẻ chia và yêu thương trong từng khoảnh khắc."
                   </p>
-                  <div className="list-none mt-6 flex justify-content">
+                  <div className="list-none mt-6 flex justify-center">
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
@@ -489,7 +489,7 @@ const LandingPage = (props: Props) => {
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/nguyentheanh2002"
+                            href="https://www.facebook.com/tranthiiyen"
                           >
                             <IconFB width="22" height="22" color="#2563eb" />
                           </a>
@@ -497,7 +497,7 @@ const LandingPage = (props: Props) => {
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="mailto:nguyentheanh14072002@gmail.com"
+                            href="mailto:tranthiyen25012000@gmail.com"
                           >
                             <IconMailColor width="22" height="22" />
                           </a>
@@ -505,7 +505,7 @@ const LandingPage = (props: Props) => {
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="tel:0923239468"
+                            href="tel:0968389058"
                           >
                             <IconPhone width="22" height="22" color="#00ad59" />
                           </a>
