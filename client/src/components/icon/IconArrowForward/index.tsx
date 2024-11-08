@@ -2,9 +2,10 @@ import React from "react";
 type IconProps = {
   width?: string;
   height?: string;
+  color?: string;
 };
 export const IconArrowForward = (props: IconProps) => {
-  const { width = "18px", height = "18px" } = props;
+  const { width = "18px", height = "18px", color = "white" } = props;
   return (
     <>
       <svg
@@ -15,7 +16,7 @@ export const IconArrowForward = (props: IconProps) => {
         viewBox="0 0 512 512"
       >
         <path
-          fill="none"
+          fill={color}
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"

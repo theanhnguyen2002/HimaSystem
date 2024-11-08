@@ -13,6 +13,7 @@ import { IconMail } from "../../components/icon/IconMail";
 import { IconMenu } from "../../components/icon/IconMenu";
 import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
+import { IconMailColor } from "../../components/icon/IconMailColor";
 
 interface Props {
   collapseID?: string;
@@ -49,9 +50,8 @@ const LandingPage = (props: Props) => {
             </button>
           </div>
           <div
-            className={`${
-              isCollapsed ? "hidden" : "flex"
-            } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
+            className={`${isCollapsed ? "hidden" : "flex"
+              } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
             id="example-collapse-navbar"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
@@ -60,7 +60,11 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/profile.php?id=61557647955666"
                 >
-                  <IconFB  width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`}/>
+                  <IconFB
+                    width="24"
+                    height="24"
+                    color={`${isCollapsed ? "#ffff" : "#00000"}`}
+                  />
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
@@ -69,7 +73,11 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="mailto:nguyentheanh14072002@gmail.com"
                 >
-                  <IconMail width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
+                  <IconMail
+                    width="24"
+                    height="24"
+                    color={`${isCollapsed ? "#ffff" : "#00000"}`}
+                  />
                   <span className="lg:hidden inline-block ml-2">Gmail</span>
                 </a>
               </li>
@@ -78,7 +86,11 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="tel:0923239468"
                 >
-                  <IconPhone width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
+                  <IconPhone
+                    width="24"
+                    height="24"
+                    color={`${isCollapsed ? "#ffff" : "#00000"}`}
+                  />
                   <span className="lg:hidden inline-block ml-2">
                     Điện thoại
                   </span>
@@ -106,7 +118,11 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.facebook.com/profile.php?id=61557647955666"
                 >
-                  <IconFB  width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`}/>
+                  <IconFB
+                    width="24"
+                    height="24"
+                    color={`${isCollapsed ? "#ffff" : "#00000"}`}
+                  />
                 </a>
               </li>
               <li className="flex items-center">
@@ -114,7 +130,11 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="mailto:nguyentheanh14072002@gmail.com"
                 >
-                  <IconMail width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
+                  <IconMail
+                    width="24"
+                    height="24"
+                    color={`${isCollapsed ? "#ffff" : "#00000"}`}
+                  />
                 </a>
               </li>
               <li className="flex items-center">
@@ -122,7 +142,11 @@ const LandingPage = (props: Props) => {
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="tel:0923239468"
                 >
-                  <IconPhone width="24" height="24" color={`${isCollapsed ? "#ffff" : "#00000"}`} />
+                  <IconPhone
+                    width="24"
+                    height="24"
+                    color={`${isCollapsed ? "#ffff" : "#00000"}`}
+                  />
                 </a>
               </li>
               <li className="flex items-center">
@@ -273,7 +297,7 @@ const LandingPage = (props: Props) => {
                   Đặt lịch ngay!
                 </a>
               </div>
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto pt-8 md:pt-0">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
                   <iframe
                     src="https://www.youtube.com/embed/QndF5igzv6I"
@@ -336,29 +360,29 @@ const LandingPage = (props: Props) => {
                     <img
                       alt="Slide 1"
                       className="w-full h-full object-contain rounded-lg"
-                      src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/461418546_122156971844254931_2175395595484075470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4quVa68SSe2CO9dBhK-2KPTFvz-voos89MW_P6-iiz89pezxP_0xeyfzcSatE2383bkThcxUk-W3kTdG_V-Of&_nc_ohc=ODJFcVQS2UYQ7kNvgGVy7lD&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&_nc_gid=AiOWvMBp40Imdqythn2DbzD&oh=00_AYDbjrThTr-ullRlfNY_k2H7UZB0mcSEeIbDZBi9o6yZwA&oe=673100A3"
+                      src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/460027205_2243337422712967_865164804291587983_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEeYmltROobNm-_fpD3c0M_h9NRAwd80BSH01EDB3zQFAYbWlhcwxsYpGsHLtnMSHeW-iECg5rxwqMkw-aIllMs&_nc_ohc=ALqOt_z_8ZAQ7kNvgFId8WB&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=Ayyar1xIv3AQymzP69w22vi&oh=00_AYB2o4JufpzBp8JjnMMSyKTbmABHaMY09mJ-Uin7FWT1tg&oe=6730B524"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       alt="Slide 2"
                       className="w-full h-full object-contain rounded-lg"
-                      src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/460027205_2243337422712967_865164804291587983_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEeYmltROobNm-_fpD3c0M_h9NRAwd80BSH01EDB3zQFAYbWlhcwxsYpGsHLtnMSHeW-iECg5rxwqMkw-aIllMs&_nc_ohc=ALqOt_z_8ZAQ7kNvgFId8WB&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=Ayyar1xIv3AQymzP69w22vi&oh=00_AYB2o4JufpzBp8JjnMMSyKTbmABHaMY09mJ-Uin7FWT1tg&oe=6730B524"
+                      src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/465851534_2290929081287134_6299348081918081334_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HFFz7-Bb_W4Q7kNvgHJJYr9&_nc_zt=23&_nc_ht=scontent.fhan5-8.fna&_nc_gid=AeZ3NGKrWD67rtngU2-cC1D&oh=00_AYAxeYGAvTZ-kyImEje8DdXB6YDDeIUHrwInu46w7ZD_hg&oe=67311D7B"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       alt="Slide 3"
                       className="w-full h-full object-contain rounded-lg"
-                      src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/465851534_2290929081287134_6299348081918081334_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HFFz7-Bb_W4Q7kNvgHJJYr9&_nc_zt=23&_nc_ht=scontent.fhan5-8.fna&_nc_gid=AeZ3NGKrWD67rtngU2-cC1D&oh=00_AYAxeYGAvTZ-kyImEje8DdXB6YDDeIUHrwInu46w7ZD_hg&oe=67311D7B"
+                      src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/461418546_122156971844254931_2175395595484075470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4quVa68SSe2CO9dBhK-2KPTFvz-voos89MW_P6-iiz89pezxP_0xeyfzcSatE2383bkThcxUk-W3kTdG_V-Of&_nc_ohc=ODJFcVQS2UYQ7kNvgGVy7lD&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&_nc_gid=AiOWvMBp40Imdqythn2DbzD&oh=00_AYDbjrThTr-ullRlfNY_k2H7UZB0mcSEeIbDZBi9o6yZwA&oe=673100A3"
                     />
                   </SwiperSlide>
                 </Swiper>
               </div>
 
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div className="w-full md:w-5/12 ml-auto mr-auto px-4 pt-8 md:pt-0">
                 <div className="md:pr-12">
-                  <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
+                  <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-[#db2777]">
                     <IconPhoto width="24" height="24" />
                   </div>
                   <h3 className="text-3xl font-semibold">Wedding Ceremony</h3>
@@ -367,25 +391,25 @@ const LandingPage = (props: Props) => {
                     Hạnh phúc trọn vẹn không chỉ ở những gì ta có, mà ở sự đồng
                     hành, sẻ chia và yêu thương trong từng khoảnh khắc."
                   </p>
-                  <ul className="list-none mt-6 flex justify-content">
+                  <div className="list-none mt-6 flex justify-content">
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="flex text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3">
+                          <span className="flex text-xs font-semibold inline-block uppercase rounded-full text-pink-600">
                             <IconArrowForward width="24" height="24" />
                           </span>
                         </div>
-                        <div>
+                        <div className="pl-2 pb-1">
                           <a
                             className="text-gray-600 text-[14px] no-underline"
                             href="https://www.facebook.com/profile.php?id=61557647955666"
                           >
-                            Liên hệ đặt lịch ngay!
+                            Liên hệ đặt lịch!
                           </a>
                         </div>
                       </div>
                     </li>
-                  </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -396,12 +420,11 @@ const LandingPage = (props: Props) => {
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">
-                  Đây là những anh hùng của chúng tôi
+                  Đây là những chuyên gia của chúng tôi
                 </h2>
                 <p className="text-lg leading-relaxed m-4 text-gray-600">
-                  Theo Cơ quan Quản lý Khí quyển và Đại dương Quốc gia, Ted,
-                  Scambos, nhà mùi hương hàng đầu của NSIDC, đưa ra mức kỷ lục
-                  có khả năng đạt được.
+                  ...những chuyên gia có uy tín trong ngành, đội ngũ sáng tạo
+                  của chúng tôi...
                 </p>
               </div>
             </div>
@@ -420,29 +443,29 @@ const LandingPage = (props: Props) => {
                       <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
                         Photographer / Camerman
                       </p>
-                      <div className="mt-6 flex justify-center gap-2">
+                      <div className="mt-6 flex justify-center gap-3">
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="https://www.facebook.com/nguyentheanh2002"
                           >
-                            <IconFB width="32" height="32" color="#2563eb" />
+                            <IconFB width="22" height="22" color="#2563eb" />
                           </a>
                         </li>
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="mailto:nguyentheanh14072002@gmail.com"
                           >
-                            <IconFB width="32" height="32" color="#2563eb" />
+                            <IconMailColor width="22" height="22" />
                           </a>
                         </li>
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="tel:0923239468"
                           >
-                            <IconFB width="32" height="32" color="#2563eb" />
+                            <IconPhone width="22" height="22" color="#00ad59" />
                           </a>
                         </li>
                       </div>
@@ -462,29 +485,29 @@ const LandingPage = (props: Props) => {
                       <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
                         Makeup / Mua
                       </p>
-                      <div className="mt-6 flex justify-center gap-2">
+                      <div className="mt-6 flex justify-center gap-3">
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="https://www.facebook.com/nguyentheanh2002"
                           >
-                            <IconFB width="32" height="32" color="#2563eb" />
+                            <IconFB width="22" height="22" color="#2563eb" />
                           </a>
                         </li>
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="mailto:nguyentheanh14072002@gmail.com"
                           >
-                            <IconFB width="32" height="32" color="#2563eb" />
+                            <IconMailColor width="22" height="22" />
                           </a>
                         </li>
                         <li className="flex items-center">
                           <a
                             className=""
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="tel:0923239468"
                           >
-                            <IconFB width="32" height="32" color="#2563eb" />
+                            <IconPhone width="22" height="22" color="#00ad59" />
                           </a>
                         </li>
                       </div>
