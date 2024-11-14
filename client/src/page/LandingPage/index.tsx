@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -14,10 +14,45 @@ import { IconMenu } from "../../components/icon/IconMenu";
 import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
 import { IconMailColor } from "../../components/icon/IconMailColor";
+import s from './style.module.scss';
 
 interface Props {
   collapseID?: string;
 }
+const images = [
+  {
+    alt: "Slide 1",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460294857_2243337742712935_773991659442836196_n_o8l2ww.jpg",
+  },
+  {
+    alt: "Slide 2",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557783/466165235_2294813120898730_3677425471658947721_n_z6gene.jpg",
+  },
+  {
+    alt: "Slide 3",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/465851534_2290929081287134_6299348081918081334_n_qjn3y9.jpg",
+  },
+  {
+    alt: "Slide 4",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/460027205_2243337422712967_865164804291587983_n_nlyoev.jpg",
+  },
+  {
+    alt: "Slide 5",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/449121003_2180979365615440_2636796335667856947_n_n2mlmo.jpg",
+  },
+  {
+    alt: "Slide 6",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557102/440119693_2137000720013305_1589138799179434157_n_ydco5h.jpg",
+  },
+  {
+    alt: "Slide 7",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/432646619_2115362882177089_1959314792468265635_n_klchcj.jpg",
+  },
+  {
+    alt: "Slide 8",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460468854_2243337666046276_1722248205009182200_n_qwcspy.jpg",
+  },
+];
 
 const LandingPage = (props: Props) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -349,34 +384,23 @@ const LandingPage = (props: Props) => {
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
                 <Swiper
-                  modules={[Pagination, Navigation]}
+                  modules={[Pagination, Navigation, Autoplay]}
                   pagination={{ clickable: true }}
                   navigation
+                  autoplay={{ delay: 3000, disableOnInteraction: false }}
                   spaceBetween={10}
                   slidesPerView={1}
-                  className="h-full rounded-lg shadow-lg"
+                  className={`h-full rounded-lg shadow-lg ${s.swiper}`}
                 >
-                  <SwiperSlide>
-                    <img
-                      alt="Slide 1"
-                      className="w-full h-full object-contain rounded-lg"
-                      src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/460027205_2243337422712967_865164804291587983_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEeYmltROobNm-_fpD3c0M_h9NRAwd80BSH01EDB3zQFAYbWlhcwxsYpGsHLtnMSHeW-iECg5rxwqMkw-aIllMs&_nc_ohc=ALqOt_z_8ZAQ7kNvgFId8WB&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=Ayyar1xIv3AQymzP69w22vi&oh=00_AYB2o4JufpzBp8JjnMMSyKTbmABHaMY09mJ-Uin7FWT1tg&oe=6730B524"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      alt="Slide 2"
-                      className="w-full h-full object-contain rounded-lg"
-                      src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/465851534_2290929081287134_6299348081918081334_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HFFz7-Bb_W4Q7kNvgHJJYr9&_nc_zt=23&_nc_ht=scontent.fhan5-8.fna&_nc_gid=AeZ3NGKrWD67rtngU2-cC1D&oh=00_AYAxeYGAvTZ-kyImEje8DdXB6YDDeIUHrwInu46w7ZD_hg&oe=67311D7B"
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      alt="Slide 3"
-                      className="w-full h-full object-contain rounded-lg"
-                      src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/461418546_122156971844254931_2175395595484075470_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF4quVa68SSe2CO9dBhK-2KPTFvz-voos89MW_P6-iiz89pezxP_0xeyfzcSatE2383bkThcxUk-W3kTdG_V-Of&_nc_ohc=ODJFcVQS2UYQ7kNvgGVy7lD&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&_nc_gid=AiOWvMBp40Imdqythn2DbzD&oh=00_AYDbjrThTr-ullRlfNY_k2H7UZB0mcSEeIbDZBi9o6yZwA&oe=673100A3"
-                    />
-                  </SwiperSlide>
+                  {images.map((image, index) => (
+                    <SwiperSlide className="h-auto" key={index}>
+                      <img
+                        alt={image.alt}
+                        className="w-full h-full object-contain rounded-lg"
+                        src={image.src}
+                      />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
 
@@ -434,9 +458,8 @@ const LandingPage = (props: Props) => {
                   <div className="px-6">
                     <img
                       alt="Nguyễn Thế Anh"
-                      src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-1/419911402_2076994986013879_8685908315044894683_n.jpg?stp=c0.683.1365.1365a_dst-jpg_s480x480&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeGTP_yJRQeYuPP3jCFfVYTJ13K11EivSyLXcrXUSK9LIil7YMVWSpXhPCVWYHxOTdFUhFvK-1vD7fpFqMZc6EUy&_nc_ohc=h55tbw8TvHEQ7kNvgGM_T-U&_nc_zt=24&_nc_ht=scontent.fhan5-9.fna&_nc_gid=AkojaRQ_7LHRJ7BiZU6Uv8n&oh=00_AYAJT20nXgcq-_M7yy8ZViZC0qHTyipu7ayjbhnipcbG6g&oe=6730D1AC"
-                      className="shadow-lg rounded-full max-w-full mx-auto"
-                      style={{ maxWidth: 120 }}
+                      src="https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731556035/Profile_pluscq.jpg"
+                      className="w-[120px] h-[120px] object-cover shadow-lg rounded-full max-w-full mx-auto"
                     />
                     <div className="pt-6 text-center">
                       <h5 className="text-xl font-bold">Nguyễn Thế Anh</h5>
@@ -461,10 +484,7 @@ const LandingPage = (props: Props) => {
                           </a>
                         </li>
                         <li className="flex items-center">
-                          <a
-                            className=""
-                            href="tel:0923239468"
-                          >
+                          <a className="" href="tel:0923239468">
                             <IconPhone width="22" height="22" color="#00ad59" />
                           </a>
                         </li>
@@ -476,7 +496,7 @@ const LandingPage = (props: Props) => {
                   <div className="px-6">
                     <img
                       alt="Trần Thị Yến"
-                      src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-1/448719003_2195249794166685_3453710915303333008_n.jpg?stp=dst-jpg_s480x480&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHrKvPtnVf3LHc5hM1fEWRXPumh4TVkqAs-6aHhNWSoC4XntRC9HGMkT515QHJ6Fwk0IfzOMAea-2tWAU_0dYcn&_nc_ohc=vh7YN_ZbTLMQ7kNvgErzePO&_nc_zt=24&_nc_ht=scontent.fhan5-11.fna&_nc_gid=A7Yk7FsLv8Gsco1xNquUAuT&oh=00_AYAOrl9Y8FPX2fmathWW83gIt3BTJMGm22nwQapn3pRlsg&oe=6730C2E5"
+                      src="https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731555687/448719003_2195249794166685_3453710915303333008_n_q3uhlt.jpg"
                       className="shadow-lg rounded-full max-w-full mx-auto"
                       style={{ maxWidth: 120 }}
                     />
@@ -503,10 +523,7 @@ const LandingPage = (props: Props) => {
                           </a>
                         </li>
                         <li className="flex items-center">
-                          <a
-                            className=""
-                            href="tel:0968389058"
-                          >
+                          <a className="" href="tel:0968389058">
                             <IconPhone width="22" height="22" color="#00ad59" />
                           </a>
                         </li>
