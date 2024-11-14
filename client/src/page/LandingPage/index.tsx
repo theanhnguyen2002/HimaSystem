@@ -14,7 +14,7 @@ import { IconMenu } from "../../components/icon/IconMenu";
 import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
 import { IconMailColor } from "../../components/icon/IconMailColor";
-import s from './style.module.scss';
+import s from "./style.module.scss";
 
 interface Props {
   collapseID?: string;
@@ -85,8 +85,9 @@ const LandingPage = (props: Props) => {
             </button>
           </div>
           <div
-            className={`${isCollapsed ? "hidden" : "flex"
-              } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
+            className={`${
+              isCollapsed ? "hidden" : "flex"
+            } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
             id="example-collapse-navbar"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
