@@ -327,7 +327,7 @@ const LandingPage = (props: Props) => {
                   CHỤP.
                 </p>
                 <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+                  href="https://m.me/61557647955666"
                   className="font-bold text-gray-800 mt-8 no-underline"
                 >
                   Đặt lịch ngay!
@@ -427,7 +427,7 @@ const LandingPage = (props: Props) => {
                         <div className="pl-2 pb-1">
                           <a
                             className="text-gray-600 text-[14px] no-underline"
-                            href="https://www.facebook.com/profile.php?id=61557647955666"
+                            href="https://m.me/61557647955666"
                           >
                             Liên hệ đặt lịch!
                           </a>
