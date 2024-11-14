@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import { useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -107,7 +108,7 @@ const LandingPage = (props: Props) => {
               <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="mailto:nguyentheanh14072002@gmail.com"
+                  href="mailto:himaweddingfilm@gmail.com"
                 >
                   <IconMail
                     width="24"
@@ -614,64 +615,64 @@ const LandingPage = (props: Props) => {
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                  <div className="flex-auto p-5 lg:p-10">
+                  <div className="flex-auto p-4 md:p-5 lg:p-10">
                     <h4 className="text-2xl font-semibold">
-                      Want to work with us?
+                      Thông tin liên hệ
                     </h4>
                     <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                      Complete this form and we will get back to you in 24
-                      hours.
+                      Hãy để lại thông tin của bạn, chũng tôi sẽ liên hệ bạn
+                      ngay!
                     </p>
                     <div className="relative w-full mb-3 mt-8">
                       <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        className="block text-left uppercase text-gray-700 text-xs font-bold mb-2 ml-2"
                         htmlFor="full-name"
                       >
-                        Full Name
+                        Họ tên
                       </label>
                       <input
                         type="text"
                         className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Full Name"
+                        placeholder="Họ tên bạn"
                         style={{ transition: "all 0.15s ease 0s" }}
                       />
                     </div>
                     <div className="relative w-full mb-3">
                       <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                        htmlFor="email"
+                        className="block text-left uppercase text-gray-700 text-xs font-bold mb-2 ml-2"
+                        htmlFor="phone"
                       >
-                        Email
+                        Số điện thoại
                       </label>
                       <input
-                        type="email"
+                        type="phone"
                         className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Email"
+                        placeholder="Số điện thoại của bạn"
                         style={{ transition: "all 0.15s ease 0s" }}
                       />
                     </div>
                     <div className="relative w-full mb-3">
                       <label
-                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        className="block text-left uppercase text-gray-700 text-xs font-bold mb-2 ml-2"
                         htmlFor="message"
                       >
-                        Message
+                        Lời nhắn
                       </label>
                       <textarea
                         rows={4}
                         cols={80}
                         className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Type a message..."
+                        placeholder="Lời nhắn bạn gửi đến chúng tôi"
                         defaultValue={""}
                       />
                     </div>
                     <div className="text-center mt-6">
                       <button
-                        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                         type="button"
                         style={{ transition: "all 0.15s ease 0s" }}
                       >
-                        Send Message
+                        Gửi ngay
                       </button>
                     </div>
                   </div>
@@ -703,119 +704,40 @@ const LandingPage = (props: Props) => {
         </div>
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl font-semibold">Let's keep in touch!</h4>
+            <div className="w-full lg:w-6/12 px-4 m-auto">
+              <h4 className="text-3xl font-semibold">
+                Hãy giữ liên lạc với chúng tôi!
+              </h4>
               <h5 className="text-lg mt-0 mb-2 text-gray-700">
-                Find us on any of these platforms, we respond 1-2 business days.
+                Tìm chúng tôi trên bất kỳ nền tảng nào sau đây, chúng tôi sẽ
+                phản hồi trong vòng 24h làm việc.
               </h5>
-              <div className="mt-6">
-                <button
-                  className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
-                >
-                  <i className="flex fab fa-twitter" />
-                </button>
-                <button
-                  className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
-                >
-                  <i className="flex fab fa-facebook-square" />
-                </button>
-                <button
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
-                >
-                  <i className="flex fab fa-dribbble" />
-                </button>
-                <button
-                  className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
-                >
-                  <i className="flex fab fa-github" />
-                </button>
+              <div className="flex justify-center gap-4 mt-6 pb-4">
+                <div className="">
+                  <a className="" href="https://www.facebook.com/tranthiiyen">
+                    <IconFB width="28" height="28" color="#2563eb" />
+                  </a>
+                </div>
+                <div className="">
+                  <a className="" href="mailto:himaweddingfilm@gmail.com">
+                    <IconMailColor width="28" height="28" />
+                  </a>
+                </div>
+                <div className="">
+                  <a className="" href="tel:0923239468">
+                    <IconPhone width="28" height="28" color="#00ad59" />
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
-                    Useful Links
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation"
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://blog.creative-tim.com"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.github.com/creativetimofficial"
-                      >
-                        Github
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/bootstrap-themes/free"
-                      >
-                        Free Products
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
-                    Other Resources
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-                      >
-                        MIT License
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/terms"
-                      >
-                        Terms &amp; Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/privacy"
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/contact-us"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="w-full lg:w-6/12 ">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.1895228604976!2d105.88130627486976!3d21.27048058044002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350500a6f4e291%3A0x941f18fc2a74f0b6!2sHima%20Wedding%20Film!5e1!3m2!1svi!2s!4v1731578970916!5m2!1svi!2s"
+                style={{ border: 0, borderRadius: "10px", height: 300, width: "100%" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
           <hr className="my-6 border-gray-400" />
