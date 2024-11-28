@@ -36,14 +36,17 @@ HimaSystem/
 
 🛠️ Lệnh hữu ích
    Chạy dự án:
+   
       ```bash
       npm run start
       
    Build dự án:
+   
       ```bash
       npm run build
       
    Kiểm tra lỗi:
+   
       ```bash
       npm run lint
       
