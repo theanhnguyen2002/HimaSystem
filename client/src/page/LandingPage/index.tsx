@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { useState } from "react";
-import { Autoplay, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,16 +8,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { IconArrowForward } from "../../components/icon/IconArrowForward";
 import { IconDiamond } from "../../components/icon/IconDiamond";
 import { IconFB } from "../../components/icon/IconFB";
+import { IconGift } from "../../components/icon/IconGift";
 import { IconHeart } from "../../components/icon/IconHeart";
 import { IconMail } from "../../components/icon/IconMail";
-import { IconMailColor } from "../../components/icon/IconMailColor";
 import { IconMenu } from "../../components/icon/IconMenu";
 import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
-import { IconStar } from "../../components/icon/IconStar";
-import { IconUsd } from "../../components/icon/IconUsd";
-import { IconWeChat } from "../../components/icon/IconWeChat";
+import { IconMailColor } from "../../components/icon/IconMailColor";
 import s from "./style.module.scss";
+import { IconWeChat } from "../../components/icon/IconWeChat";
+import { IconUsd } from "../../components/icon/IconUsd";
+import { IconStar } from "../../components/icon/IconStar";
 
 interface Props {
   collapseID?: string;
@@ -34,6 +35,40 @@ const Images_Banner = [
   {
     alt: "Slide 3",
     src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732792270/Beige_Minimalist_Mother_s_Day_Sale_Promotional_Banner_oejpmc.jpg",
+  },
+];
+const images = [
+  {
+    alt: "Slide 1",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460294857_2243337742712935_773991659442836196_n_o8l2ww.jpg",
+  },
+  {
+    alt: "Slide 2",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557783/466165235_2294813120898730_3677425471658947721_n_z6gene.jpg",
+  },
+  {
+    alt: "Slide 3",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/465851534_2290929081287134_6299348081918081334_n_qjn3y9.jpg",
+  },
+  {
+    alt: "Slide 4",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/460027205_2243337422712967_865164804291587983_n_nlyoev.jpg",
+  },
+  {
+    alt: "Slide 5",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/449121003_2180979365615440_2636796335667856947_n_n2mlmo.jpg",
+  },
+  {
+    alt: "Slide 6",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557102/440119693_2137000720013305_1589138799179434157_n_ydco5h.jpg",
+  },
+  {
+    alt: "Slide 7",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/432646619_2115362882177089_1959314792468265635_n_klchcj.jpg",
+  },
+  {
+    alt: "Slide 8",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460468854_2243337666046276_1722248205009182200_n_qwcspy.jpg",
   },
 ];
 
