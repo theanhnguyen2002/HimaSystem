@@ -68,8 +68,9 @@ const LandingPage = (props: Props) => {
             </button>
           </div>
           <div
-            className={`${isCollapsed ? "hidden" : "flex"
-              } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
+            className={`${
+              isCollapsed ? "hidden" : "flex"
+            } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
             id="example-collapse-navbar"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
@@ -375,13 +376,14 @@ const LandingPage = (props: Props) => {
         {/* Video */}
         <section className="relative py-10">
           <div className="grid">
-            <div className="px-12">
-              <p className="title pb-2 text-3xl font-semibold">Video Graphics</p>
-              <div className="w-40 h-0.5 bg-black flex justify-self-center" />
-              <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
-                Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những khoảnh
-                khắc hạnh phúc nhất trong đời bạn!
-              </p>
+            <div className="flex flex-wrap justify-center text-center">
+              <div className="w-full lg:w-6/12 px-4">
+                <h2 className="text-4xl font-semibold">Video Graphics</h2>
+                <p className="text-lg leading-relaxed m-4 text-gray-600">
+                  Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những
+                  khoảnh khắc hạnh phúc nhất trong đời bạn!
+                </p>
+              </div>
             </div>
             <div className="video flex justify-center pt-12">
               <iframe
@@ -515,13 +517,13 @@ const LandingPage = (props: Props) => {
               />
             </svg>
           </div>
-          <div className="container mx-auto px-4 pb-20 pt-8 lg:pt-16 lg:pb-60">
-            <div className="flex flex-wrap mt-12 justify-center md:py-0.5 py-8">
-              <div className="w-full lg:w-3/12 px-6 text-center">
+          <div className="container mx-auto px-4.5 pb-20 pt-8 lg:pt-16 lg:pb-60">
+            <div className="flex flex-wrap mt-8 justify-center md:py-0.5 py-8">
+              <div className="w-full lg:w-3/12 px-6 pt-2 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconWeChat width="24" height="24" />
                 </div>
-                <h6 className="text-xl mt-5 font-semibold text-white">
+                <h6 className="text-xl mt-3 font-semibold text-white">
                   TƯ VẤN
                 </h6>
                 <p className="mt-2 mb-4 text-gray-500">
@@ -529,11 +531,11 @@ const LandingPage = (props: Props) => {
                   tận tình và giải đáp mọi thắc mắc của bạn.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-6 text-center">
+              <div className="w-full lg:w-3/12 px-6 pt-2 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconUsd width="24" height="24" />
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
+                <h5 className="text-xl mt-3 font-semibold text-white">
                   BÁO GIÁ
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
@@ -541,11 +543,11 @@ const LandingPage = (props: Props) => {
                   ràng ngay khi bạn liên hệ.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-6 text-center">
+              <div className="w-full lg:w-3/12 px-6 pt-2 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconStar width="24" height="24" />
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
+                <h5 className="text-xl mt-3 font-semibold text-white">
                   ĐÁNH GIÁ
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
