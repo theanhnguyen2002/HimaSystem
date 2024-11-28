@@ -10,14 +10,14 @@ import { IconDiamond } from "../../components/icon/IconDiamond";
 import { IconFB } from "../../components/icon/IconFB";
 import { IconHeart } from "../../components/icon/IconHeart";
 import { IconMail } from "../../components/icon/IconMail";
+import { IconMailColor } from "../../components/icon/IconMailColor";
 import { IconMenu } from "../../components/icon/IconMenu";
 import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
-import { IconMailColor } from "../../components/icon/IconMailColor";
-import s from "./style.module.scss";
-import { IconWeChat } from "../../components/icon/IconWeChat";
-import { IconUsd } from "../../components/icon/IconUsd";
 import { IconStar } from "../../components/icon/IconStar";
+import { IconUsd } from "../../components/icon/IconUsd";
+import { IconWeChat } from "../../components/icon/IconWeChat";
+import s from "./style.module.scss";
 
 interface Props {
   collapseID?: string;
