@@ -386,7 +386,7 @@ const LandingPage = (props: Props) => {
             <div className="video flex justify-center pt-12">
               <iframe
                 src="https://www.youtube.com/embed/QndF5igzv6I"
-                className="w-full md:w-[90%] lg:w-[60%] h-[350px] md:h-[550px] lg:h-[650px] align-middle rounded-t-lg"
+                className="w-full md:w-[90%] lg:w-[60%] h-[250px] md:h-[450px] lg:h-[650px] align-middle rounded-t-lg"
                 title="YouTube video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -399,9 +399,9 @@ const LandingPage = (props: Props) => {
             </div>
           </div>
         </section>
-        <section className="pt-20 pb-12 md:pb-40">
+        <section className="pt-16 pb-12 md:pb-40">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center text-center mb-12 md:mb-24">
+            <div className="flex flex-wrap justify-center text-center mb-12 md:mb-18">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">
                   Đây là những chuyên gia của chúng tôi
