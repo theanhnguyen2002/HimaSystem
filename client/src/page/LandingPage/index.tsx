@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { useState } from "react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { IconArrowForward } from "../../components/icon/IconArrowForward";
 import { IconDiamond } from "../../components/icon/IconDiamond";
 import { IconFB } from "../../components/icon/IconFB";
-import { IconGift } from "../../components/icon/IconGift";
 import { IconHeart } from "../../components/icon/IconHeart";
 import { IconMail } from "../../components/icon/IconMail";
 import { IconMenu } from "../../components/icon/IconMenu";
@@ -35,40 +34,6 @@ const Images_Banner = [
   {
     alt: "Slide 3",
     src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732792270/Beige_Minimalist_Mother_s_Day_Sale_Promotional_Banner_oejpmc.jpg",
-  },
-];
-const images = [
-  {
-    alt: "Slide 1",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460294857_2243337742712935_773991659442836196_n_o8l2ww.jpg",
-  },
-  {
-    alt: "Slide 2",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557783/466165235_2294813120898730_3677425471658947721_n_z6gene.jpg",
-  },
-  {
-    alt: "Slide 3",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/465851534_2290929081287134_6299348081918081334_n_qjn3y9.jpg",
-  },
-  {
-    alt: "Slide 4",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/460027205_2243337422712967_865164804291587983_n_nlyoev.jpg",
-  },
-  {
-    alt: "Slide 5",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/449121003_2180979365615440_2636796335667856947_n_n2mlmo.jpg",
-  },
-  {
-    alt: "Slide 6",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557102/440119693_2137000720013305_1589138799179434157_n_ydco5h.jpg",
-  },
-  {
-    alt: "Slide 7",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/432646619_2115362882177089_1959314792468265635_n_klchcj.jpg",
-  },
-  {
-    alt: "Slide 8",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460468854_2243337666046276_1722248205009182200_n_qwcspy.jpg",
   },
 ];
 
@@ -376,7 +341,7 @@ const LandingPage = (props: Props) => {
                   <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-[#db2777]">
                     <IconPhoto width="24" height="24" />
                   </div>
-                  <h3 className="text-3xl font-semibold">Wedding Ceremony</h3>
+                  <h3 className="text-4xl font-semibold">Wedding Ceremony</h3>
                   <p className="mt-4 text-lg leading-relaxed text-gray-600">
                     "Chặng đường mới mở ra, nơi hai trái tim hòa cùng nhịp đập.
                     Hạnh phúc trọn vẹn không chỉ ở những gì ta có, mà ở sự đồng
@@ -407,7 +372,7 @@ const LandingPage = (props: Props) => {
           </div>
         </section>
         <section className="relative">
-          <div className="flex flex-wrap items-center p-10 md:pl-24 md:pr-24 md:pb-24 justify-center">
+          <div className="flex flex-wrap items-center md:p-10 md:pl-24 md:pr-24 md:pb-24 justify-center">
             <div className="w-full max-w-[1600px] md:w-[100%]">
               <Swiper
                 modules={[Pagination, Autoplay]}
@@ -432,35 +397,37 @@ const LandingPage = (props: Props) => {
         </section>
         {/* Video */}
         <section className="relative py-20">
-          <div className="">
-            <p className="title pb-2 text-3xl font-semibold">Video Graphics</p>
-            <div className="w-40 h-0.5 bg-black flex justify-self-center" />
-            <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
-              Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những khoảnh
-              khắc hạnh phúc nhất trong đời bạn!
-            </p>
+          <div className="pt-8">
+            <div className="px-20 grid">
+              <p className="title pb-2 text-4xl font-semibold">
+                Video Graphics
+              </p>
+              <div className="w-32 h-0.5 bg-black flex justify-self-center" />
+              <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
+                Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những
+                khoảnh khắc hạnh phúc nhất trong đời bạn!
+              </p>
+            </div>
             <div className="video flex justify-center pt-12">
               <iframe
                 src="https://www.youtube.com/embed/QndF5igzv6I"
-                className="w-full h-full align-middle rounded-t-lg"
+                className="w-full md:w-[70%] h-[350px] md:h-[550px] align-middle rounded-t-lg"
                 title="YouTube video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 style={{
                   top: 0,
                   left: 0,
-                  width: "60%",
-                  height: "650px",
                   borderRadius: "8px",
                 }}
               ></iframe>
             </div>
           </div>
         </section>
-        <section className="pt-20 pb-48">
+        <section className="pt-20 md:pb-48">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
-              <div className="w-full lg:w-6/12 px-4">
+              <div className="w-full lg:w-8/12 px-4">
                 <h2 className="text-4xl font-semibold">
                   Đây là những chuyên gia của chúng tôi
                 </h2>
@@ -573,28 +540,16 @@ const LandingPage = (props: Props) => {
               />
             </svg>
           </div>
-          <div className="container mx-auto px-4 pb-24 lg:pt-24 lg:pb-64">
-            {/* <div className="flex flex-wrap text-center justify-center">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold text-white">
-                  Build something
-                </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
-                </p>
-              </div>
-            </div> */}
-            <div className="flex flex-wrap mt-12 justify-center md:py-0.5 py-8">
+          <div className="container mx-auto px-4 pb-18 pt-8 lg:pt-24 lg:pb-64">
+            <div className="flex flex-wrap justify-center md:py-0.5 py-8">
               <div className="w-full lg:w-3/12 md:px-4 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconWeChat width="24" height="24" />
                 </div>
-                <h6 className="text-xl mt-5 font-semibold text-white">
+                <h6 className="text-xl mt-3 font-semibold text-white">
                   TƯ VẤN
                 </h6>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-5 text-gray-500">
                   Liên hệ ngay để được đội ngũ chuyên viên của chúng tôi hỗ trợ
                   tận tình và giải đáp mọi thắc mắc của bạn.
                 </p>
@@ -603,10 +558,10 @@ const LandingPage = (props: Props) => {
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconUsd width="24" height="24" />
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
+                <h5 className="text-xl mt-3 font-semibold text-white">
                   BÁO GIÁ
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-5 text-gray-500">
                   Cần báo giá? Chúng tôi sẽ cung cấp thông tin chi tiết và rõ
                   ràng ngay khi bạn liên hệ.
                 </p>
@@ -615,10 +570,10 @@ const LandingPage = (props: Props) => {
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconStar width="24" height="24" />
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
+                <h5 className="text-xl mt-3 font-semibold text-white">
                   ĐÁNH GIÁ
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-5 text-gray-500">
                   Hãy để lại đánh giá, chúng tôi sẽ phản hồi nhanh nhất. Ý kiến
                   của bạn là động lực lớn cho chúng tôi!
                 </p>
@@ -766,8 +721,8 @@ const LandingPage = (props: Props) => {
           </div>
           <hr className="my-6 border-gray-400" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="flex text-sm text-gray-600 font-semibold py-1">
+            <div className="w-full md:w-8/12 px-4 mx-auto text-center">
+              <div className="flex text-sm text-gray-600 font-semibold py-1 justify-center">
                 <p>Copyright © 2024 Studio by</p>
                 <a
                   href="https://www.facebook.com/profile.php?id=61557647955666"
