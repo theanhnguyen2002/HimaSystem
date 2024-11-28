@@ -402,7 +402,7 @@ const LandingPage = (props: Props) => {
               <p className="title pb-2 text-4xl font-semibold">
                 Video Graphics
               </p>
-              <div className="w-40 h-0.5 bg-black flex justify-self-center" />
+              <div className="w-32 h-0.5 bg-black flex justify-center" />
               <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
                 Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những
                 khoảnh khắc hạnh phúc nhất trong đời bạn!
