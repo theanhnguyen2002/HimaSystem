@@ -398,11 +398,11 @@ const LandingPage = (props: Props) => {
         {/* Video */}
         <section className="relative py-20">
           <div className="pt-8">
-            <div className="px-20">
+            <div className="px-20 grid">
               <p className="title pb-2 text-4xl font-semibold">
                 Video Graphics
               </p>
-              <div className="w-32 h-0.5 bg-black flex justify-center" />
+              <div className="w-32 h-0.5 bg-black flex justify-self-center" />
               <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
                 Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những
                 khoảnh khắc hạnh phúc nhất trong đời bạn!
