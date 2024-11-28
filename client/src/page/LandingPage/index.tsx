@@ -16,10 +16,27 @@ import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
 import { IconMailColor } from "../../components/icon/IconMailColor";
 import s from "./style.module.scss";
+import { IconWeChat } from "../../components/icon/IconWeChat";
+import { IconUsd } from "../../components/icon/IconUsd";
+import { IconStar } from "../../components/icon/IconStar";
 
 interface Props {
   collapseID?: string;
 }
+const Images_Banner = [
+  {
+    alt: "Slide 1",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732792267/Black_Red_Minimalist_Fashion_Product_Introduction_Landscape_Banner_wmz2vx.jpg",
+  },
+  {
+    alt: "Slide 2",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732792268/Gray_Minimalist_New_Collection_Banner_rhxzc4.jpg",
+  },
+  {
+    alt: "Slide 3",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732792270/Beige_Minimalist_Mother_s_Day_Sale_Promotional_Banner_oejpmc.jpg",
+  },
+];
 const images = [
   {
     alt: "Slide 1",
@@ -308,61 +325,31 @@ const LandingPage = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap items-center mt-32">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto text-start">
-                <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-                  <IconGift width="24" height="24" />
-                </div>
-                <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                  Quà tặng và ưu đãi cực hấp dẫn khi đặt lịch tại Hima Wedding
-                  Film
-                </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                  📌 GIẢM NGAY 10% KHI BOOK TRỰC TIẾP QUA FANPAGE.
-                </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                  📌 QUAY CHỤP không giới hạn file , chỉnh sửa toàn bộ ảnh.
-                </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-                  📌 Tặng bay FLYCAM trị giá 2.000.000đ khi BOOK COMBO QUAY
-                  CHỤP.
-                </p>
-                <a
-                  href="https://m.me/61557647955666"
-                  className="font-bold text-gray-800 mt-8 no-underline"
+            {/* <div className="flex flex-wrap items-center md:mt-32 mt-8">
+              <div className="w-full max-w-[1600px] md:w-[100%]">
+                <Swiper
+                  modules={[Pagination, Autoplay]}
+                  pagination={{ clickable: true }}
+                  autoplay={{ delay: 3000, disableOnInteraction: false }}
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  className={`h-full rounded-lg shadow-lg ${s.swiper}`}
                 >
-                  Đặt lịch ngay!
-                </a>
+                  {Images_Banner.map((image, index) => (
+                    <SwiperSlide className="h-auto" key={index}>
+                      <img
+                        alt={image.alt}
+                        className="w-full h-full object-contain rounded-lg"
+                        src={image.src}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto pt-8 md:pt-0">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-                  <iframe
-                    src="https://www.youtube.com/embed/QndF5igzv6I"
-                    className="w-full h-full align-middle rounded-t-lg"
-                    title="YouTube video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ height: "230px" }}
-                  ></iframe>
-                  <div className="relative p-8 bg-[#db2777]">
-                    {/* <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" className="absolute left-0 w-full block" style={{ height: 95, top: '-94px' }}>
-                                            <polygon points="-30,95 583,95 583,65" className="text-pink-600 fill-current" />
-                                        </svg> */}
-                    <h4 className="text-xl font-bold text-white">
-                      Ký Ức Vẹn Nguyên Qua Từng Thước Phim:
-                    </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      "Đối với chúng tôi, những thước phim không chỉ là hình
-                      ảnh, mà là những ký ức sống động, lưu giữ mọi cảm xúc và
-                      khoảnh khắc đặc biệt trong hành trình của bạn."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div> */}
           </div>
         </section>
-        <section className="relative py-20">
+        <section className="relative py-8">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
             style={{ height: 80 }}
@@ -384,29 +371,7 @@ const LandingPage = (props: Props) => {
           </div>
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-                <Swiper
-                  modules={[Pagination, Navigation, Autoplay]}
-                  pagination={{ clickable: true }}
-                  navigation
-                  autoplay={{ delay: 3000, disableOnInteraction: false }}
-                  spaceBetween={10}
-                  slidesPerView={1}
-                  className={`h-full rounded-lg shadow-lg ${s.swiper}`}
-                >
-                  {images.map((image, index) => (
-                    <SwiperSlide className="h-auto" key={index}>
-                      <img
-                        alt={image.alt}
-                        className="w-full h-full object-contain rounded-lg"
-                        src={image.src}
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4 pt-8 md:pt-0">
+              <div className="w-full ml-auto mr-auto px-4 pt-8 md:pt-0">
                 <div className="md:pr-12">
                   <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-[#db2777]">
                     <IconPhoto width="24" height="24" />
@@ -438,6 +403,57 @@ const LandingPage = (props: Props) => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="relative">
+          <div className="flex flex-wrap items-center p-10 md:pl-24 md:pr-24 md:pb-24 justify-center">
+            <div className="w-full max-w-[1600px] md:w-[100%]">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                spaceBetween={10}
+                slidesPerView={1}
+                className={`h-full rounded-lg shadow-lg ${s.swiper}`}
+              >
+                {Images_Banner.map((image, index) => (
+                  <SwiperSlide className="h-auto" key={index}>
+                    <img
+                      alt={image.alt}
+                      className="w-full h-full object-contain rounded-lg"
+                      src={image.src}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        </section>
+        {/* Video */}
+        <section className="relative py-20">
+          <div className="">
+            <p className="title pb-2 text-3xl font-semibold">Video Graphics</p>
+            <div className="w-40 h-0.5 bg-black flex justify-self-center" />
+            <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
+              Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những khoảnh
+              khắc hạnh phúc nhất trong đời bạn!
+            </p>
+            <div className="video flex justify-center pt-12">
+              <iframe
+                src="https://www.youtube.com/embed/QndF5igzv6I"
+                className="w-full h-full align-middle rounded-t-lg"
+                title="YouTube video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  top: 0,
+                  left: 0,
+                  width: "60%",
+                  height: "650px",
+                  borderRadius: "8px",
+                }}
+              ></iframe>
             </div>
           </div>
         </section>
@@ -557,8 +573,8 @@ const LandingPage = (props: Props) => {
               />
             </svg>
           </div>
-          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div className="flex flex-wrap text-center justify-center">
+          <div className="container mx-auto px-4 pb-24 lg:pt-24 lg:pb-64">
+            {/* <div className="flex flex-wrap text-center justify-center">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold text-white">
                   Build something
@@ -569,42 +585,42 @@ const LandingPage = (props: Props) => {
                   Atmospheric Administration, Ted, Scambos.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-wrap mt-12 justify-center">
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl" />
+            </div> */}
+            <div className="flex flex-wrap mt-12 justify-center md:py-0.5 py-8">
+              <div className="w-full lg:w-3/12 md:px-4 text-center">
+                <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                  <IconWeChat width="24" height="24" />
                 </div>
                 <h6 className="text-xl mt-5 font-semibold text-white">
-                  Excelent Services
+                  TƯ VẤN
                 </h6>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Liên hệ ngay để được đội ngũ chuyên viên của chúng tôi hỗ trợ
+                  tận tình và giải đáp mọi thắc mắc của bạn.
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-poll text-xl" />
+                <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                  <IconUsd width="24" height="24" />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  Grow your market
+                  BÁO GIÁ
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Cần báo giá? Chúng tôi sẽ cung cấp thông tin chi tiết và rõ
+                  ràng ngay khi bạn liên hệ.
                 </p>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl" />
+                <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                  <IconStar width="24" height="24" />
                 </div>
                 <h5 className="text-xl mt-5 font-semibold text-white">
-                  Launch time
+                  ĐÁNH GIÁ
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Hãy để lại đánh giá, chúng tôi sẽ phản hồi nhanh nhất. Ý kiến
+                  của bạn là động lực lớn cho chúng tôi!
                 </p>
               </div>
             </div>
@@ -714,7 +730,10 @@ const LandingPage = (props: Props) => {
               </h5>
               <div className="flex justify-center gap-4 mt-6 pb-4">
                 <div className="">
-                  <a className="" href="https://www.facebook.com/tranthiiyen">
+                  <a
+                    className=""
+                    href="https://www.facebook.com/profile.php?id=61557647955666"
+                  >
                     <IconFB width="28" height="28" color="#2563eb" />
                   </a>
                 </div>
@@ -733,7 +752,12 @@ const LandingPage = (props: Props) => {
             <div className="w-full lg:w-6/12 ">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.1895228604976!2d105.88130627486976!3d21.27048058044002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350500a6f4e291%3A0x941f18fc2a74f0b6!2sHima%20Wedding%20Film!5e1!3m2!1svi!2s!4v1731578970916!5m2!1svi!2s"
-                style={{ border: 0, borderRadius: "10px", height: 300, width: "100%" }}
+                style={{
+                  border: 0,
+                  borderRadius: "10px",
+                  height: 300,
+                  width: "100%",
+                }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
