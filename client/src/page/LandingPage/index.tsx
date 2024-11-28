@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { useState } from "react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,17 +8,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { IconArrowForward } from "../../components/icon/IconArrowForward";
 import { IconDiamond } from "../../components/icon/IconDiamond";
 import { IconFB } from "../../components/icon/IconFB";
-import { IconGift } from "../../components/icon/IconGift";
 import { IconHeart } from "../../components/icon/IconHeart";
 import { IconMail } from "../../components/icon/IconMail";
+import { IconMailColor } from "../../components/icon/IconMailColor";
 import { IconMenu } from "../../components/icon/IconMenu";
 import { IconPhone } from "../../components/icon/IconPhone";
 import { IconPhoto } from "../../components/icon/IconPhoto";
-import { IconMailColor } from "../../components/icon/IconMailColor";
-import s from "./style.module.scss";
-import { IconWeChat } from "../../components/icon/IconWeChat";
-import { IconUsd } from "../../components/icon/IconUsd";
 import { IconStar } from "../../components/icon/IconStar";
+import { IconUsd } from "../../components/icon/IconUsd";
+import { IconWeChat } from "../../components/icon/IconWeChat";
+import s from "./style.module.scss";
 
 interface Props {
   collapseID?: string;
@@ -35,40 +34,6 @@ const Images_Banner = [
   {
     alt: "Slide 3",
     src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732792270/Beige_Minimalist_Mother_s_Day_Sale_Promotional_Banner_oejpmc.jpg",
-  },
-];
-const images = [
-  {
-    alt: "Slide 1",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460294857_2243337742712935_773991659442836196_n_o8l2ww.jpg",
-  },
-  {
-    alt: "Slide 2",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557783/466165235_2294813120898730_3677425471658947721_n_z6gene.jpg",
-  },
-  {
-    alt: "Slide 3",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/465851534_2290929081287134_6299348081918081334_n_qjn3y9.jpg",
-  },
-  {
-    alt: "Slide 4",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/460027205_2243337422712967_865164804291587983_n_nlyoev.jpg",
-  },
-  {
-    alt: "Slide 5",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/449121003_2180979365615440_2636796335667856947_n_n2mlmo.jpg",
-  },
-  {
-    alt: "Slide 6",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557102/440119693_2137000720013305_1589138799179434157_n_ydco5h.jpg",
-  },
-  {
-    alt: "Slide 7",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557780/432646619_2115362882177089_1959314792468265635_n_klchcj.jpg",
-  },
-  {
-    alt: "Slide 8",
-    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1731557782/460468854_2243337666046276_1722248205009182200_n_qwcspy.jpg",
   },
 ];
 
@@ -103,9 +68,8 @@ const LandingPage = (props: Props) => {
             </button>
           </div>
           <div
-            className={`${
-              isCollapsed ? "hidden" : "flex"
-            } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
+            className={`${isCollapsed ? "hidden" : "flex"
+              } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
             id="example-collapse-navbar"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
@@ -325,28 +289,6 @@ const LandingPage = (props: Props) => {
                 </div>
               </div>
             </div>
-            {/* <div className="flex flex-wrap items-center md:mt-32 mt-8">
-              <div className="w-full max-w-[1600px] md:w-[100%]">
-                <Swiper
-                  modules={[Pagination, Autoplay]}
-                  pagination={{ clickable: true }}
-                  autoplay={{ delay: 3000, disableOnInteraction: false }}
-                  spaceBetween={10}
-                  slidesPerView={1}
-                  className={`h-full rounded-lg shadow-lg ${s.swiper}`}
-                >
-                  {Images_Banner.map((image, index) => (
-                    <SwiperSlide className="h-auto" key={index}>
-                      <img
-                        alt={image.alt}
-                        className="w-full h-full object-contain rounded-lg"
-                        src={image.src}
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div> */}
           </div>
         </section>
         <section className="relative py-8">
@@ -406,8 +348,8 @@ const LandingPage = (props: Props) => {
             </div>
           </div>
         </section>
-        <section className="relative">
-          <div className="flex flex-wrap items-center p-10 md:pl-24 md:pr-24 md:pb-24 justify-center">
+        <section className="relative py-10 md:px-10">
+          <div className="flex flex-wrap justify-center">
             <div className="w-full max-w-[1600px] md:w-[100%]">
               <Swiper
                 modules={[Pagination, Autoplay]}
@@ -431,35 +373,35 @@ const LandingPage = (props: Props) => {
           </div>
         </section>
         {/* Video */}
-        <section className="relative py-20">
-          <div className="">
-            <p className="title pb-2 text-3xl font-semibold">Video Graphics</p>
-            <div className="w-40 h-0.5 bg-black flex justify-self-center" />
-            <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
-              Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những khoảnh
-              khắc hạnh phúc nhất trong đời bạn!
-            </p>
+        <section className="relative py-10">
+          <div className="grid">
+            <div className="px-12">
+              <p className="title pb-2 text-3xl font-semibold">Video Graphics</p>
+              <div className="w-40 h-0.5 bg-black flex justify-self-center" />
+              <p className="content pt-4 leading-relaxed text-gray-600 text-lg">
+                Quay phim cưới HD – Hãy để Hima Wedding Film ghi lại những khoảnh
+                khắc hạnh phúc nhất trong đời bạn!
+              </p>
+            </div>
             <div className="video flex justify-center pt-12">
               <iframe
                 src="https://www.youtube.com/embed/QndF5igzv6I"
-                className="w-full h-full align-middle rounded-t-lg"
+                className="w-full md:w-[90%] lg:w-[60%] h-[350px] md:h-[550px] lg:h-[650px] align-middle rounded-t-lg"
                 title="YouTube video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 style={{
                   top: 0,
                   left: 0,
-                  width: "60%",
-                  height: "650px",
                   borderRadius: "8px",
                 }}
               ></iframe>
             </div>
           </div>
         </section>
-        <section className="pt-20 pb-48">
+        <section className="pt-20 pb-12 md:pb-40">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center text-center mb-24">
+            <div className="flex flex-wrap justify-center text-center mb-12 md:mb-24">
               <div className="w-full lg:w-6/12 px-4">
                 <h2 className="text-4xl font-semibold">
                   Đây là những chuyên gia của chúng tôi
@@ -573,21 +515,9 @@ const LandingPage = (props: Props) => {
               />
             </svg>
           </div>
-          <div className="container mx-auto px-4 pb-24 lg:pt-24 lg:pb-64">
-            {/* <div className="flex flex-wrap text-center justify-center">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold text-white">
-                  Build something
-                </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
-                </p>
-              </div>
-            </div> */}
+          <div className="container mx-auto px-4 pb-20 pt-8 lg:pt-16 lg:pb-60">
             <div className="flex flex-wrap mt-12 justify-center md:py-0.5 py-8">
-              <div className="w-full lg:w-3/12 md:px-4 text-center">
+              <div className="w-full lg:w-3/12 px-6 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconWeChat width="24" height="24" />
                 </div>
@@ -599,7 +529,7 @@ const LandingPage = (props: Props) => {
                   tận tình và giải đáp mọi thắc mắc của bạn.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              <div className="w-full lg:w-3/12 px-6 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconUsd width="24" height="24" />
                 </div>
@@ -611,7 +541,7 @@ const LandingPage = (props: Props) => {
                   ràng ngay khi bạn liên hệ.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
+              <div className="w-full lg:w-3/12 px-6 text-center">
                 <div className="text-white p-1 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
                   <IconStar width="24" height="24" />
                 </div>
@@ -721,10 +651,10 @@ const LandingPage = (props: Props) => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-6/12 px-4 m-auto">
-              <h4 className="text-3xl font-semibold">
+              <h4 className="text-2xl md:text-3xl font-semibold">
                 Hãy giữ liên lạc với chúng tôi!
               </h4>
-              <h5 className="text-lg mt-0 mb-2 text-gray-700">
+              <h5 className="text-sm md:text-lg mt-0 mb-2 text-gray-700">
                 Tìm chúng tôi trên bất kỳ nền tảng nào sau đây, chúng tôi sẽ
                 phản hồi trong vòng 24h làm việc.
               </h5>
@@ -766,8 +696,8 @@ const LandingPage = (props: Props) => {
           </div>
           <hr className="my-6 border-gray-400" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="flex text-sm text-gray-600 font-semibold py-1">
+            <div className="w-full md:w-8/12 px-4 mx-auto text-center">
+              <div className="flex text-xs md:text-sm text-gray-600 font-semibold py-1 justify-center">
                 <p>Copyright © 2024 Studio by</p>
                 <a
                   href="https://www.facebook.com/profile.php?id=61557647955666"
