@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import { useState } from "react";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -19,10 +18,23 @@ import { IconUsd } from "../../components/icon/IconUsd";
 import { IconWeChat } from "../../components/icon/IconWeChat";
 import s from "./style.module.scss";
 import ModalImages from "../../components/common/CommonModal/ModalImages";
+import { Controller, useForm } from "react-hook-form";
+import ForwardedInput from "../../components/common/Innput";
+import { ErrorTooltip } from "../../components/common/Text/ErrorTooltip";
+import { REGEX } from "../../utils/constants/regex";
+import { toast } from "react-toastify";
+import MapComponent from "../../components/common/MapComponent";
 
 interface Props {
   collapseID?: string;
+  IFormInputs?: IFormContact;
 }
+interface IFormContact {
+  name: string;
+  phone: string;
+  message: string;
+}
+
 type Image = { src: string; alt: string };
 const Images_Banner = [
   {
@@ -246,6 +258,12 @@ const Images_Album: Image[] = [
 ];
 
 const LandingPage = (props: Props) => {
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<IFormContact>();
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleNavbar = () => {
@@ -258,12 +276,16 @@ const LandingPage = (props: Props) => {
   };
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
-  // const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const handleOpen = (image: any) => {
     setSelectedImage(image);
     setOpen(true);
   };
   const handleClose = () => setOpen(false);
+  const handleSubmitForm = (data: IFormContact) => {
+    // dispatch(loginAsync(data));
+    toast.success("Gửi thành công!");
+    reset();
+  };
 
   return (
     <div className="text-gray-800 antialiased">
@@ -289,8 +311,9 @@ const LandingPage = (props: Props) => {
             </button>
           </div>
           <div
-            className={`${isCollapsed ? "hidden" : "flex"
-              } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
+            className={`${
+              isCollapsed ? "hidden" : "flex"
+            } flex lg:hidden flex-grow items-center lg:!bg-transparent lg:shadow-none bg-[#fff] rounded-lg sm:shadow-lg`}
             id="example-collapse-navbar"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
@@ -822,7 +845,10 @@ const LandingPage = (props: Props) => {
           </div>
         </section>
         <section className="relative block py-24 lg:pt-0 bg-gray-900">
-          <div className="container mx-auto px-4">
+          <form
+            className="container mx-auto px-4"
+            onSubmit={handleSubmit(handleSubmitForm)}
+          >
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
@@ -841,11 +867,33 @@ const LandingPage = (props: Props) => {
                       >
                         Họ tên
                       </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Họ tên bạn"
-                        style={{ transition: "all 0.15s ease 0s" }}
+                      <Controller
+                        name="name"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: "Nhập họ tên bạn",
+                          pattern: {
+                            value: REGEX.VALIDATE_NAME,
+                            message: "Họ tên không hợp lệ",
+                          },
+                        }}
+                        render={({ field }) => (
+                          <ForwardedInput
+                            {...field}
+                            type="text"
+                            placeholder={"Họ tên bạn"}
+                            className={
+                              "border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                            }
+                            style={{ transition: "all 0.15s ease 0s" }}
+                            hasError={!!errors?.name?.message}
+                          />
+                        )}
+                      />
+                      <ErrorTooltip
+                        errorMessage={errors?.name?.message}
+                        hasError={!!errors?.name?.message}
                       />
                     </div>
                     <div className="relative w-full mb-3">
@@ -855,11 +903,33 @@ const LandingPage = (props: Props) => {
                       >
                         Số điện thoại
                       </label>
-                      <input
-                        type="phone"
-                        className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Số điện thoại của bạn"
-                        style={{ transition: "all 0.15s ease 0s" }}
+                      <Controller
+                        name="phone"
+                        control={control}
+                        defaultValue=""
+                        rules={{
+                          required: "Nhập số điện thoại",
+                          pattern: {
+                            value: REGEX.VALIDATE_PHONE,
+                            message: "Số điện thoại không hợp lệ",
+                          },
+                        }}
+                        render={({ field }) => (
+                          <ForwardedInput
+                            {...field}
+                            type="text"
+                            placeholder={"Số điện thoại của bạn"}
+                            className={
+                              "border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                            }
+                            style={{ transition: "all 0.15s ease 0s" }}
+                            hasError={!!errors?.phone?.message}
+                          />
+                        )}
+                      />
+                      <ErrorTooltip
+                        errorMessage={errors?.phone?.message}
+                        hasError={!!errors?.phone?.message}
                       />
                     </div>
                     <div className="relative w-full mb-3">
@@ -880,7 +950,7 @@ const LandingPage = (props: Props) => {
                     <div className="text-center mt-6">
                       <button
                         className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
+                        type="submit"
                         style={{ transition: "all 0.15s ease 0s" }}
                       >
                         Gửi ngay
@@ -890,7 +960,7 @@ const LandingPage = (props: Props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </section>
       </main>
       <footer className="relative bg-gray-300 pt-8 pb-6">
@@ -945,18 +1015,7 @@ const LandingPage = (props: Props) => {
               </div>
             </div>
             <div className="w-full lg:w-6/12 ">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.1895228604976!2d105.88130627486976!3d21.27048058044002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350500a6f4e291%3A0x941f18fc2a74f0b6!2sHima%20Wedding%20Film!5e1!3m2!1svi!2s!4v1731578970916!5m2!1svi!2s"
-                style={{
-                  border: 0,
-                  borderRadius: "10px",
-                  height: 300,
-                  width: "100%",
-                }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <MapComponent />
             </div>
           </div>
           <hr className="my-6 border-gray-400" />
@@ -977,34 +1036,31 @@ const LandingPage = (props: Props) => {
         </div>
       </footer>
       <ModalImages open={open} handleClose={handleClose}>
-  {/* Hiển thị ảnh lớn */}
-  {selectedImage && (
-    <img
-      src={selectedImage.src}
-      alt={selectedImage.alt}
-      className="object-contain max-w-full max-h-full rounded-lg m-auto"
-      style={{ maxHeight: '80vh', maxWidth: '80vw' }}
-    />
-  )}
-  
-  {/* Thumbnails */}
-  {/* <div className="flex justify-start items-center gap-2 p-2 bg-white shadow-lg overflow-x-auto w-full">
-    {Images_Album.map((image, index) => (
-      <img
-        key={index}
-        src={image.src}
-        alt={image.alt}
-        className={`w-20 h-20 object-cover rounded-lg cursor-pointer ${index === selectedImageIndex ? "border-2 border-blue-500" : ""} flex-shrink-0`}
-        onClick={() => {
-          setSelectedImageIndex(index); // Cập nhật chỉ số ảnh được chọn
-          setSelectedImage(image); // Cập nhật ảnh được chọn
-        }}
-      />
-    ))}
-  </div> */}
-</ModalImages>
+        {selectedImage && (
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.alt}
+            className="object-contain max-w-full max-h-full rounded-lg m-auto"
+            style={{ maxHeight: "80vh", maxWidth: "80vw" }}
+          />
+        )}
 
-
+        {/* Thumbnails */}
+        {/* <div className="flex justify-start items-center gap-2 p-2 bg-white shadow-lg overflow-x-auto w-full">
+          {Images_Album.map((image, index) => (
+            <img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              className={`w-20 h-20 object-cover rounded-lg cursor-pointer ${index === selectedImageIndex ? "border-2 border-blue-500" : ""} flex-shrink-0`}
+              onClick={() => {
+                setSelectedImageIndex(index); // Cập nhật chỉ số ảnh được chọn
+                setSelectedImage(image); // Cập nhật ảnh được chọn
+              }}
+            />
+          ))}
+        </div> */}
+      </ModalImages>
     </div>
   );
 };
