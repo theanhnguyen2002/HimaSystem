@@ -211,6 +211,38 @@ const Images_Album: Image[] = [
     alt: "Image 43",
     src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1732862831/432650590_2115360392177338_6509336118866651548_n_bgkx2s.jpg",
   },
+  {
+    alt: "Image 44",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733403346/1_dph8nr.jpg",
+  },
+  {
+    alt: "Image 45",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733403161/5_tn5evz.jpg",
+  },
+  {
+    alt: "Image 46",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733403157/7_eobhkz.jpg",
+  },
+  {
+    alt: "Image 47",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733403158/8_jnydpl.jpg",
+  },
+  {
+    alt: "Image 48",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733403157/4_hi1tgy.jpg",
+  },
+  {
+    alt: "Image 49",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733402376/6_uyupir.jpg",
+  },
+  {
+    alt: "Image 50",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733402376/3_yyt75g.jpg",
+  },
+  {
+    alt: "Image 51",
+    src: "https://res.cloudinary.com/ddj3vx8q3/image/upload/v1733403176/2_roluwp.jpg",
+  },
 ];
 
 const LandingPage = (props: Props) => {
