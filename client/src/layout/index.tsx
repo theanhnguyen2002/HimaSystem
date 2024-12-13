@@ -25,7 +25,7 @@ function App() {
       <LandingPage />
       <ToastContainer
         position="top-right"
-        autoClose={30000000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
