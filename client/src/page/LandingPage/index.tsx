@@ -245,20 +245,20 @@ const LandingPage = (props: Props) => {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                'url("https://res.cloudinary.com/ddj3vx8q3/image/upload/v1730826455/Bi%CC%80a_clywue.jpg")',
+                'url("https://res.cloudinary.com/ddj3vx8q3/image/upload/v1738848654/9_rccho3.jpg")',
             }}
           >
             <span
               id="blackOverlay"
-              className=" flex !w-full h-full absolute opacity-50 bg-black"
+              className=" flex !w-full h-full absolute opacity-40 bg-black"
             />
           </div>
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-full px-4 ml-auto mr-auto text-center">
-                <div className="lg:pr-12 pt-8">
+                <div className="pt-8">
                   <h1 className="text-white font-semibold text-5xl">
-                    Hima Wedding Film - Chụp Ảnh Phóng Sự Cưới Sóc Sơn
+                    Hima Wedding Film - Chụp Ảnh Phóng Sự Cưới
                   </h1>
                   <p className="mt-4 text-lg text-white">
                     Những khoảnh khắc yêu thương là mảnh ghép tuyệt vời tạo nên
